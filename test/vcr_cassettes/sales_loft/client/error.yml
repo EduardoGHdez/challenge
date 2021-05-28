@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.salesloft.com/invalid_path
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer v2_ak_10822_b7d5b1148634d66aed74df3fecb7c4de4dcdda036c7304460ee06d30aba66732
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 28 May 2021 20:02:20 GMT
+      Vary:
+      - Origin
+      X-Ratelimit-Endpoint-Cost:
+      - '1'
+      X-Ratelimit-Remaining-Minute:
+      - '596'
+      X-Request-Id:
+      - 7cb3d6b3edfcddbe88e9587b4a7bcadb
+      X-Runtime:
+      - '0.003256'
+      Content-Length:
+      - '36'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"status":"404","error":"Not Found"}'
+  recorded_at: Fri, 28 May 2021 20:02:20 GMT
+recorded_with: VCR 6.0.0
