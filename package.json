@@ -17,7 +17,12 @@
     "webpack-cli": "^3.3.12"
   },
   "version": "0.1.0",
+  "scripts": {
+    "test": "jest --verbose ./app/javascript/components"
+  },
   "devDependencies": {
+    "jest": "^27.0.1",
+    "react-test-renderer": "^17.0.2",
     "webpack-dev-server": "^3.11.2"
   }
 }
