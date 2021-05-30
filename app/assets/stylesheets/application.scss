@@ -85,3 +85,17 @@ table td span {
     display: block;
   }
 }
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  button {
+    margin: 20px;
+    padding: 5px;
+    width: 200px;
+    font-family: sans-serif;
+    font-weight: bold;
+  }
+}
