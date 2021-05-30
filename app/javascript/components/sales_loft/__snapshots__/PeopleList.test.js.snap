@@ -2,22 +2,40 @@
 
 exports[`<PeopleList /> renders correctly 1`] = `
 <section>
+  <nav
+    className="action-buttons"
+  >
+    <button
+      id="showPeople"
+      onClick={[Function]}
+    >
+       People 
+    </button>
+    <button
+      id="showCharacters"
+      onClick={[Function]}
+    >
+       Unique Characters Count 
+    </button>
+  </nav>
   <h1>
     <b>
       People
     </b>
   </h1>
-  <table>
+  <table
+    id="people"
+  >
     <thead>
       <tr>
         <th>
-          Name
+           Name 
         </th>
         <th>
-          Email
+           Email 
         </th>
         <th>
-          Job Title
+           Job title 
         </th>
       </tr>
     </thead>
