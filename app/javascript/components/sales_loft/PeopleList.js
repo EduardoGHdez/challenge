@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { charactersFrequency } from "./utils";
+import { charactersFrequency, levenshteinSimilarityRatio } from "./utils";
 
 function PeopleList({ people }) {
   const peopleTable = () => (
@@ -51,6 +51,35 @@ function PeopleList({ people }) {
     )
   };
 
+  const possibleDuplicates = () => {
+    const minSimilarityRatio = 0.9;
+
+    const groupedEmails = people.reduce((groupedEmails, { emailAddress: currentEmail }) => {
+      const didFindGroup = groupedEmails.find((emailGroup) => {
+        if (emailGroup.find((email) => levenshteinSimilarityRatio(email, currentEmail) > minSimilarityRatio)) {
+          emailGroup.push(currentEmail);
+          return true;
+        }
+
+        return false;
+      });
+
+      if (!didFindGroup) {
+        groupedEmails.push([currentEmail]);
+      }
+
+      return groupedEmails;
+    }, []);
+
+    return (
+      <ul id="possibleDuplicatedEmails">
+        { groupedEmails.filter((group) => group.length > 1).map((emailGroup) => (
+          <li key={emailGroup[0]}>{ emailGroup.join(", ") }</li>
+        ))}
+      </ul>
+    )
+  }
+
   const renderTable = {
     peopleTable: {
       title: "People",
@@ -59,18 +88,24 @@ function PeopleList({ people }) {
     charactersCountTable: {
       title: "Unique Characters Count",
       table: charactersCountTable
+    },
+    possibleDuplicates: {
+      title: "Possible Duplicated Emails",
+      table: possibleDuplicates
     }
   };
 
   const [tableToRender, setTableToRender] = useState("peopleTable");
   const showCharactersCountTable = () => setTableToRender("charactersCountTable");
   const showPeopleTable = () => setTableToRender("peopleTable");
+  const showDuplicatedEmails = () => setTableToRender("possibleDuplicates");
 
   return (
     <section>
       <nav className="action-buttons">
         <button id="showPeople" onClick={ showPeopleTable }> People </button>
         <button id="showCharacters" onClick={ showCharactersCountTable }> Unique Characters Count </button>
+        <button id="showDuplicatedEmails" onClick={ showDuplicatedEmails }> Possible Duplicated Emails </button>
       </nav>
       <h1><b>{ renderTable[tableToRender].title }</b></h1>
       { renderTable[tableToRender].table() }
