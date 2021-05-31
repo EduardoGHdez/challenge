@@ -23,8 +23,7 @@ That's why I opted for creating a PR.
 
 I'd recommend to review this challenge in the following way:
 
-1. [Go to the closed PR's page](https://github.com/EduardoGHdez/challenge/pulls?q=is%3Apr+is%3Aclosed)
-2. There should be a PR with my progress out of the app setup (rails-boilerplate)
-3. Just review commit by commit.
+1. [Go to the PR with the important code](https://github.com/EduardoGHdez/challenge/pull/2)
+2. Just review commit by commit.
 
 If you want to see how it works, here I have a [live-demo](https://eduardoghdez-salesloft-challen.herokuapp.com/)
