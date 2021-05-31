@@ -24,10 +24,10 @@ describe("<PeopleList />", () => {
     expect(wrapper.find("table#people").length).toBe(1);
   });
 
-  it('renders 2 buttons', () => {
+  it('renders 3 buttons', () => {
     const wrapper = mount(<PeopleList people={ mockedPeople } />);
 
-    expect(wrapper.find("button").length).toBe(2);
+    expect(wrapper.find("button").length).toBe(3);
   });
 
   it("renders characters-count-list when 'Unique Characters Count' is clicked", () => {
@@ -42,5 +42,23 @@ describe("<PeopleList />", () => {
     expect(wrapper.find('table#people').length).toBe(0);
     // It shows characters table
     expect(wrapper.find('table#characters').length).toBe(1);
+  });
+
+  it("renders the possible-duplicated-emails when 'Possible Duplicated Emails' is clicked", () => {
+    const wrapper = mount(<PeopleList people={ mockedPeople } />);
+
+    // Initial load
+    expect(wrapper.find('table#people').length).toBe(1);
+
+    wrapper.find('button#showDuplicatedEmails').simulate('click');
+
+    // People table is no longer shown
+    expect(wrapper.find('table#people').length).toBe(0);
+    // It shows characters table
+    expect(wrapper.find('ul#possibleDuplicatedEmails').length).toBe(1);
+
+    // Show people table again
+    wrapper.find('button#showPeople').simulate('click');
+    expect(wrapper.find('table#people').length).toBe(1);
   });
 });

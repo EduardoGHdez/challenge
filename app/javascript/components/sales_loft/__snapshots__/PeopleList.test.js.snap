@@ -17,6 +17,12 @@ exports[`<PeopleList /> renders correctly 1`] = `
     >
        Unique Characters Count 
     </button>
+    <button
+      id="showDuplicatedEmails"
+      onClick={[Function]}
+    >
+       Possible Duplicated Emails 
+    </button>
   </nav>
   <h1>
     <b>
