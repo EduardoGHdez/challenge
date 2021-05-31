@@ -1,24 +1,30 @@
-# README
+# SalesLoft Code Challenge
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is my solution to the SalesLoft Code Challenges
 
-Things you may want to cover:
+It's a simple app that uses:
+- Ruby: 2.7
+- Rails: 6
+- React 17
 
-* Ruby version
+For testing I went with:
+- Minitest (for Ruby :gem:)
+- Jest (fo JS)
 
-* System dependencies
+## How to review:
 
-* Configuration
+In order to make it easy to review, I did progressive-commits and used the Git-flow to encapsulate
+the important commits into a PR.
 
-* Database creation
+It just happens that trying to go commit by commit at master branch is not easy, or at least GitHub
+does not provide a friendly UI to do so.
 
-* Database initialization
+That's why I opted for creating a PR.
 
-* How to run the test suite
+I'd recommend to review this challenge in the following way:
 
-* Services (job queues, cache servers, search engines, etc.)
+1. [Go to the closed PR's page](https://github.com/EduardoGHdez/challenge/pulls?q=is%3Apr+is%3Aclosed)
+2. There should be a PR with my progress out of the app setup (rails-boilerplate)
+3. Just review commit by commit.
 
-* Deployment instructions
-
-* ...
+If you want to see how it works, here I have a [live-demo](https://eduardoghdez-salesloft-challen.herokuapp.com/)

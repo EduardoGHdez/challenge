@@ -1,0 +1,101 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+$body-background: #fafafa;
+$body-color: #444;
+
+body {
+  background: $body-background;
+  color: $body-color;
+  font-family: sans-serif;
+}
+
+h1, nav, footer {
+  text-align: center;
+}
+
+main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 4rem auto;
+  max-width: 60rem;
+  width: 80%;
+}
+
+/* Default table styles for this demo */
+table {
+  border-collapse: collapse;
+  text-align: left;
+}
+table tr {
+}
+table th, table td {
+  padding: 10px 20px;
+  width: 300px;
+}
+table td span {
+  background: #eee;
+  color: dimgrey;
+  display: none;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 5px;
+  position: absolute;
+  text-transform: uppercase;
+  top: 0;
+  left: 0;
+}
+
+/* Simple CSS for flexbox table on mobile */
+@media(max-width: 800px) {
+  table thead {
+    left: 1;
+    position: absolute;
+    visibility: hidden;
+  }
+  table tr {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  table td {
+    border: 1px solid;
+    margin: 0 -1px -1px 0;
+    padding-top: 35px;
+    position: relative;
+    width: 100%;
+  }
+  table td span {
+    display: block;
+  }
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  button {
+    margin: 20px;
+    padding: 5px;
+    width: 200px;
+    font-family: sans-serif;
+    font-weight: bold;
+  }
+}

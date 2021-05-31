@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PeopleList /> renders correctly 1`] = `
+<section>
+  <nav
+    className="action-buttons"
+  >
+    <button
+      id="showPeople"
+      onClick={[Function]}
+    >
+       People 
+    </button>
+    <button
+      id="showCharacters"
+      onClick={[Function]}
+    >
+       Unique Characters Count 
+    </button>
+    <button
+      id="showDuplicatedEmails"
+      onClick={[Function]}
+    >
+       Possible Duplicated Emails 
+    </button>
+  </nav>
+  <h1>
+    <b>
+      People
+    </b>
+  </h1>
+  <table
+    id="people"
+  >
+    <thead>
+      <tr>
+        <th>
+           Name 
+        </th>
+        <th>
+           Email 
+        </th>
+        <th>
+           Job title 
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <span>
+            Name
+          </span>
+          Homer Simpson
+        </td>
+        <td>
+          <span>
+            Email
+          </span>
+          homer.simpson@gmail.com
+        </td>
+        <td>
+          <span>
+            Job Title
+          </span>
+          Sr. Software Engineer
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span>
+            Name
+          </span>
+          Bart Simpson
+        </td>
+        <td>
+          <span>
+            Email
+          </span>
+          bart.simpson@gmail.com
+        </td>
+        <td>
+          <span>
+            Job Title
+          </span>
+          Software Engineer
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span>
+            Name
+          </span>
+          Lisa Simpson
+        </td>
+        <td>
+          <span>
+            Email
+          </span>
+          lisa.simpson@gmail.com
+        </td>
+        <td>
+          <span>
+            Job Title
+          </span>
+          Tech Lead
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+`;
